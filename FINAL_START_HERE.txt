@@ -1,0 +1,48 @@
+SIDEQUEST: TAFT RADAR — FINAL SCHOOL EDITION
+
+QUICK OPEN
+Double-click SIDEQUEST_Final.html. No installation is needed for the local reporting app.
+Keep using the same browser and file location to retain your saved records.
+
+STREET MAP
+Street tiles need internet and an HTTP/HTTPS address.
+Option 1: Open index.html with VS Code Live Server.
+Option 2: On Windows, run START_SIDEQUEST.bat (requires Python 3).
+Keep the server window open. Opening the HTML file directly pauses street tiles.
+The report list, area and landmark fields remain usable.
+Changing from a file address to a server address uses separate browser storage.
+
+TEST ACCOUNTS — ALL USE PASSWORD: DemoOnly123!
+Citizen: explorer@example.test
+Second citizen: neighbor@example.test
+Coordinator: coordinator@example.test
+Use fictional details and a password you do not use elsewhere.
+
+PRESENTATION FLOW
+1. HOME — Marj: show the Taft coverage, reviewed concerns and Report action.
+2. REPORT — Chesca: enter one concern, location and available evidence; check
+   duplicate suggestions, review the details, submit and retain the reference.
+3. TRACK — Matthew: enter the reference, show the status history and next step.
+4. COORDINATOR — Sodie: sign in as coordinator; review the new report, request
+   missing information or verify it with an explanation, then show Track again.
+
+The four required pages are Home, Report, Track and Coordinator. Area map and
+My Activity are supporting views. The layout responds to actual screen width.
+
+SUBMISSION CONTENTS
+SIDEQUEST_Final.html: one-file version for easy access.
+index.html + CSS/JS/vendor files: editable source for Live Server or hosting.
+scripts/build_single_html.py: rebuilds the single HTML after source edits.
+tests/: DOM and data logic checks; package.json includes the test command.
+
+SCOPE
+Working browser-local school app. No shared backend, secure production login,
+actual agency delivery or guaranteed resolution. Sample cases are fictional.
+Coordinator actions in this file do not contact an outside office.
+XP recognizes approved participation; it does not determine report priority.
+
+VALIDATION
+27 map/data checks passed, plus plain page/navigation and script checks.
+These checks do not verify visual layout or actual provider tile loading.
+Before presenting, open on your device and check Home, Report, Track and
+Coordinator at desktop and mobile widths using the intended opening method.

@@ -1,0 +1,70 @@
+/* Plain edition: the existing SIDEQUEST application with neutral presentation. */
+:root{--v3-text:#222;--v3-green:#222;--v3-accent:#333;--v3-muted:#555;--v3-line:#aaa;--ink:#222;--muted:#555;--line:#aaa;--green:#222}
+html,body,body.plain-ui{font-family:Arial,Helvetica,sans-serif!important;background:#fff!important;color:#222!important}
+.plain-ui *{font-family:Arial,Helvetica,sans-serif!important;box-shadow:none!important;text-shadow:none!important;animation:none!important;transition:none!important}
+.plain-ui :is(.welcome-overlay,.welcome-layer){background:#fffffff0!important}
+.plain-ui :is(button,input,select,textarea,.card,.v11-sheet,.sq-operations-panel,.modal,.toast,.tag,.pill-label,.sq-admin-case,.sq-admin-metric,.sq-live-map,.status-hero,.mini-issue,.field,.textarea,.select){border-radius:0!important}
+.plain-ui :is(.ambient,.welcome-story,.access-symbol,.auth-mascot,.v7-mascot,.profile-mascot,.hero-art,.brand-mark,.brand-accent:empty,.personalize-trigger,.demo-label .pulse-dot,.access-divider,.demo-quick,.v12-city-mark,.sq-admin-symbol,.sq-admin-nav>span[aria-hidden],.mobile-nav button>span){display:none!important}
+.plain-ui :is(.card,.v11-sheet,.v11-highlight,.v11-notice,.v11-case-meta>div,.v11-referral-stage,.v12-compact-doc,.status-hero,.sq-operations-panel,.sq-admin-metric,.sq-admin-case,.sq-admin-top,.sq-admin-sidebar,.sq-admin-app,.sq-admin-body,.admin-hero,.modal,.toast,.auth-header,.completion,.profile-header,.welcome-frame,.welcome-access,.account-chip,.xp-chip,.hint,.note,.stat,.tag,.pill-label,.access-tabs,.sq-reward-card,.sq-profile-card,.sq-level-overview,.sq-level-meta,.sq-level-bubble,.profile-summary,.sq-admin-mini,.v11-flow-step,.sq-admin-empty){background:#fff!important;background-image:none!important;color:#222!important;border-color:#999!important}
+.plain-ui :is(.card,.v11-sheet,.sq-operations-panel,.status-hero,.sq-admin-metric,.sq-admin-case){border:1px solid #999!important}
+.plain-ui :is(button,.btn,.access-submit,.guest-link,.sq-admin-nav,.v12-cta){background:#fff!important;background-image:none!important;color:#222!important;border:1px solid #777!important;border-radius:0!important;transform:none!important}
+.plain-ui :is(button,.btn):hover{background:#eee!important;color:#111!important}
+.plain-ui :is(button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible){outline:2px solid #222!important;outline-offset:3px!important}
+.plain-ui :is(.brand,.navlinks button,.text-link,.mobile-nav button){border:0!important;background:#fff!important}
+.plain-ui .navlinks button.nav-active{border-bottom:2px solid #222!important;font-weight:700}
+.plain-ui :is(.btn:not(.btn-white):not(.btn-soft):not(.btn-small),.access-submit){background:#222!important;color:#fff!important}
+.plain-ui :is(.field,.textarea,.select,input,select,textarea){background:#fff!important;color:#222!important;border:1px solid #999!important}
+.plain-ui input[type=checkbox],.plain-ui input[type=radio]{accent-color:#222}
+.plain-ui :is(.muted,.helper,.map-note,.small.muted,.access-note,.v11-tiny,.v12-demo-caption,.eyebrow,.sq-admin-eyebrow,.access-eyebrow,.kicker,.brand-accent){color:#555!important}
+.plain-ui .shell{max-width:1160px!important}
+.plain-ui .topbar{border-bottom:1px solid #999;gap:18px;padding-top:20px;padding-bottom:20px;background:#fff!important}
+.plain-ui .brand{font-size:21px;min-width:130px}.plain-ui .brand small{font-size:10px;letter-spacing:1px}
+.plain-ui .brand-accent{color:inherit!important}
+.plain-ui main{padding-top:26px!important}
+.plain-ui :is(h1,h2,h3){font-family:Arial,sans-serif!important;letter-spacing:normal!important;color:#222!important}
+.plain-ui h1{font-size:30px!important;line-height:1.15!important}.plain-ui h2{font-size:22px!important}.plain-ui h3{font-size:17px!important}
+.plain-ui p{line-height:1.5}.plain-ui .page{padding-top:0!important}
+.plain-ui .form-layout{grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr)!important;gap:24px}
+.plain-ui .form-section{border-color:#bbb!important}.plain-ui .step-number{background:#fff!important;color:#222!important;border:1px solid #888;border-radius:50%!important}
+.plain-ui .category-choice{gap:8px}.plain-ui .category-choice label{background:#fff!important;color:#222!important;border-color:#999!important;border-radius:0!important;font-size:12px}
+.plain-ui .upload{border:1px dashed #888!important;background:#fff!important;border-radius:0!important}
+.plain-ui .upload>span[style]{display:none!important}
+.plain-ui .mobile-nav{background:#fff!important;border-top:1px solid #999}.plain-ui .mobile-nav .mobile-add{border:1px solid #777!important}
+.plain-ui .welcome-frame{max-width:480px!important;grid-template-columns:1fr!important;min-height:0!important;display:block!important;border:1px solid #999!important;border-radius:0!important}
+.plain-ui .welcome-overlay{background:#fffffff0!important}.plain-ui .welcome-access{padding:28px!important;width:100%!important;min-height:0!important}
+.plain-ui .access-head{padding:0!important}.plain-ui .access-tabs{gap:8px}.plain-ui .access-tabs .active{border-bottom:2px solid #222!important;font-weight:bold}
+.plain-ui .access-register-only select option{color:#222}.plain-ui .welcome-access input{border-radius:0!important}
+.plain-ui .auth-header img,.plain-ui .profile-avatar img{filter:grayscale(1)}
+.plain-ui .plain-local-label{font-size:11px;color:#555;border:1px solid #aaa;padding:5px 7px;white-space:nowrap}
+.plain-ui .demo-ribbon{background:#fff!important;color:#555!important;border-bottom:1px solid #aaa!important;font-size:11px!important;padding:7px 18px!important}
+.plain-ui .sq-admin-sidebar{border-right:1px solid #999!important}.plain-ui .sq-admin-top{border-bottom:1px solid #999!important}
+.plain-ui .sq-admin-nav.active{border:1px solid #333!important;text-decoration:underline}.plain-ui .sq-admin-menu{gap:8px}
+.plain-ui :is(.sq-meter,.v12-meter,.v11-bar){background:#eee!important}.plain-ui :is(.sq-meter i,.v12-meter i,.v11-bar i){background:#555!important}
+.plain-ui .sq-admin-case{padding:14px!important}.plain-ui .sq-admin-metric{padding:15px!important}
+.plain-ui .sq-live-map{border:1px solid #999!important}.plain-ui .sq-live-map :is(.sq-map-toolbar,.sq-map-help,.sq-map-message,.sq-map-boundary-label){background:#fff!important;color:#333!important;border-bottom:1px solid #ddd}
+.plain-ui .sq-leaflet-canvas .leaflet-tile-pane{filter:grayscale(1)}
+.plain-ui .sq-pin-disc{border-color:#333!important;background:white!important}.plain-ui .sq-pin-disc span{color:#222!important}
+.plain-ui .sq-private-pin .sq-pin-disc{border-style:dashed!important}.plain-ui .sq-picked-pin{background:#222!important;box-shadow:0 0 0 2px #222!important}
+.plain-ui .leaflet-popup-content-wrapper{border-radius:0!important;border:1px solid #999!important}
+.plain-ui .footer{border-top:1px solid #999;margin-top:30px;padding-top:18px;padding-bottom:24px;background:#fff!important}
+.plain-home{display:grid;grid-template-columns:1fr 1.5fr .9fr;gap:22px;align-items:start}
+.plain-intro{padding-top:12px}.plain-intro p{margin:15px 0 22px}.plain-intro .btn{display:block;width:100%;text-align:center;margin-top:10px}
+.plain-home .sq-live-map{margin-top:0}.plain-home .sq-leaflet-canvas{height:330px}
+.plain-issue{border:1px solid #999;padding:16px}.plain-issue .btn{width:100%;margin-top:10px}
+.plain-section-title{display:flex;align-items:center;gap:14px;font-size:14px!important;text-align:center;margin:30px 0 22px}
+.plain-section-title:before,.plain-section-title:after{content:'';height:1px;flex:1;background:#999}
+.plain-categories{display:flex;justify-content:space-around;gap:10px;flex-wrap:wrap}
+.plain-categories button{border:0!important;padding:8px;min-width:110px;max-width:180px;font-size:12px}
+.plain-category-index{display:grid;place-items:center;width:50px;height:50px;margin:0 auto 10px;border:1px solid #777;border-radius:50%;font-size:17px}
+.plain-summary{display:flex;justify-content:space-between;align-items:center;gap:18px;border:1px solid #999;padding:18px;flex-wrap:wrap}
+.plain-summary p{margin:6px 0 0}.plain-example-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}.plain-example-list button{text-align:left;padding:16px}.plain-example-list strong,.plain-example-list small{display:block;margin-top:6px}
+@media(max-width:980px){.plain-home{grid-template-columns:1fr 1.4fr}.plain-issue{grid-column:1 / -1}.plain-ui .topbar{flex-wrap:wrap}.plain-ui .navlinks{order:3;width:100%;display:flex!important;flex-wrap:wrap;justify-content:flex-start}.plain-ui .navlinks button{padding:8px!important}.plain-ui .nav-actions{margin-left:auto}.plain-ui .form-layout{grid-template-columns:1fr!important}.plain-ui .side-panel{display:none!important}.plain-ui .mobile-map-pick,.plain-ui .mobile-match-box{display:block!important}}
+@media(max-width:600px){.plain-home{grid-template-columns:1fr}.plain-issue{grid-column:auto}.plain-categories button{min-width:65px;max-width:100px;font-size:10px;padding:4px}.plain-category-index{width:40px;height:40px}.plain-example-list{grid-template-columns:1fr}.plain-ui h1{font-size:26px!important}.plain-ui .topbar{padding:15px!important}.plain-ui .nav-actions{flex-wrap:wrap;gap:7px}.plain-ui .account-chip{padding:6px!important}.plain-ui .demo-label{display:none!important}.plain-ui .form-grid{grid-template-columns:1fr!important}.plain-ui .form-span{grid-column:auto!important}.plain-ui .sq-admin-app{display:block!important}.plain-ui .sq-admin-sidebar{position:static!important;width:100%!important;min-height:0!important;padding:14px!important;border-bottom:1px solid #999}.plain-ui .sq-admin-menu{display:flex;flex-wrap:wrap}.plain-ui .sq-admin-side-label{display:none}.plain-ui .sq-admin-bottom{margin-top:12px}.plain-ui .sq-admin-body{margin-left:0!important;width:100%!important;padding:16px!important}.plain-ui .sq-admin-metrics{grid-template-columns:repeat(2,1fr)!important}}
+
+/* Final submission: keyboard access and narrow-screen overflow. */
+.sq-skip-link{position:fixed;left:12px;top:-100px;z-index:99999;padding:12px;background:white;color:#111;border:2px solid #111}
+.sq-skip-link:focus{top:12px}
+.plain-home>*{min-width:0}
+.plain-ui :is(.plain-issue,.plain-example-list button,.sq-map-popup,.v11-case-meta){overflow-wrap:anywhere}
+.plain-ui .sq-map-toolbar select{max-width:100%}
+@media(max-width:600px){.plain-ui .footer{flex-direction:column;align-items:flex-start;padding-bottom:100px}.plain-ui .sq-map-toolbar label{min-width:0;width:100%}.plain-ui .sq-map-toolbar{flex-wrap:wrap}}

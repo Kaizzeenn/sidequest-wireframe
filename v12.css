@@ -1,0 +1,46 @@
+/* SIDEQUEST V12: clarity, progressive rewards, street-level explorer identity. No licensed artwork. */
+:root{--v12-ink:#263c34;--v12-muted:#53675d;--v12-cream:#fffcf5;--v12-border:#d7e4d8}
+.v12-milestone{display:flex;gap:14px;align-items:center;background:#f6f7ee;border:1px solid #dce5d8;border-radius:16px;padding:15px 18px;margin:14px 0 0}
+.v12-milestone .v12-circle{flex:0 0 58px;height:58px;width:58px;border:2px solid #a4c2a5;background:#fffefa;border-radius:50%;display:grid;place-items:center;font-size:22px;font-weight:900;color:#355e49}
+.v12-progress{flex:1;min-width:0}.v12-progress strong{display:block;font-size:16px;line-height:1.35;color:var(--v12-ink)}.v12-progress span{display:block;font-size:13px;line-height:1.5;color:var(--v12-muted)}
+.v12-meter{display:block;width:100%;height:8px;background:#dae5d8;border-radius:10px;overflow:hidden;margin:10px 0 7px}.v12-meter>i{display:block;height:100%;background:#5a9b7a;border-radius:10px;transition:width .32s ease}
+.v12-eyebrow{font-size:12px;color:#55715c;letter-spacing:.03em;font-weight:800}
+.v12-sidewalk-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:15px}
+.v12-sidewalk-grid>.v12-surface{min-width:0;border:1px solid #d5e2d5;background:#fffefa;border-radius:17px;padding:19px}
+.v12-surface h3{font-size:19px;color:#2c483a;margin:0 0 8px;line-height:1.25}
+.v12-surface p{font-size:13px;color:#526b5c;line-height:1.65;margin:0 0 11px}
+.v12-reward-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:12px 0}
+.v12-tier{text-align:left;padding:11px;border:1px solid #dce5db;border-radius:11px;background:#f7f9f4;min-width:0}
+.v12-tier.unlocked{background:#eaf4ea;border-color:#accbae}.v12-tier strong{display:block;font-size:12px;color:#2d4f3e}.v12-tier small{display:block;font-size:11px;color:#597062;margin-top:5px;line-height:1.4}
+.v12-guardians{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:10px 0 15px}
+.v12-guardian{background:#fff;border:1px solid #d7e3d8;border-radius:14px;padding:11px 8px;color:#2d4b3f;cursor:pointer;display:flex;align-items:center;flex-direction:column;gap:5px;transition:border-color .17s,background .17s,transform .17s}
+.v12-guardian:hover{transform:translateY(-2px);border-color:#8aae8e}.v12-guardian:focus-visible{outline:3px solid #b77d53;outline-offset:3px}
+.v12-guardian[aria-pressed="true"],.v12-guardian.active{background:#eff8ed;border-color:#5b9b70;box-shadow:inset 0 0 0 1px #5b9b70}
+.v12-guardian svg{width:66px;height:72px;max-width:100%}.v12-guardian b{font-size:12px;line-height:1.35;text-align:center}.v12-guardian small{font-size:11px;text-align:center;color:#627366;line-height:1.3}
+.v12-city-mark{height:50px;overflow:hidden;position:relative;margin-top:6px;border-bottom:4px solid #9fbda5;border-radius:7px;background:#f7faf4}
+.v12-city-mark svg{display:block;width:100%;height:60px}
+.v12-checkpoint{display:flex;gap:9px;align-items:center;font-size:13px;color:#365448;margin:8px 0}
+.v12-dot{height:9px;width:9px;flex:none;border-radius:50%;background:#6c9f79}
+.v12-street-map-trigger{margin:11px 0 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.v12-street-map-host{margin:14px 0;background:#f7faf5;border:1px solid #d5e4d7;border-radius:13px;overflow:hidden}
+.v12-street-map-host iframe{display:block;border:0;width:100%;min-height:420px;background:#eef2ed}
+.v12-street-map-notice{font-size:12px;color:#4e6558;padding:11px 15px;line-height:1.55}
+.v12-street-map-error{font-size:13px;background:#fff7ec;padding:11px 14px;color:#735b3b;border-top:1px solid #eedccc}
+.v12-compact-doc{background:#f3f7ef;border:1px solid #d9e5d8;padding:14px 16px;border-radius:12px;margin-top:15px;color:#365342;font-size:13px;line-height:1.65}
+.v12-compact-doc strong{color:#284b3b}
+.v12-last-section{margin-top:18px}
+.v12-a11y a:focus-visible,.v12-a11y button:focus-visible{outline:3px solid #b77d53;outline-offset:3px}
+.v12-theme-cameo{border:1px solid #d9e2d8;background:#fbfaf4;border-radius:14px;padding:17px;margin-top:14px}
+.v12-theme-cameo p{font-size:13px;line-height:1.65;color:#54675d;margin:6px 0}
+.v12-demo-caption{color:#65766b;font-size:12px;line-height:1.6}
+.v12-cta{border:1px solid #afc8ab;color:#2f5845;background:#f7fbf3;border-radius:9px;padding:9px 13px;font-size:12px;font-weight:800;cursor:pointer}
+.v12-cta:hover{background:#eaf3e7}
+@media(max-width:900px){.v12-sidewalk-grid{grid-template-columns:1fr}.v12-reward-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.v12-guardians{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.v12-guardian{padding:9px 4px}.v12-guardian svg{height:53px;width:50px}.v12-guardian small{font-size:10px}.v12-reward-list{grid-template-columns:repeat(2,minmax(0,1fr))}.v12-milestone{padding:12px;gap:10px}.v12-milestone .v12-circle{width:49px;height:49px;flex-basis:49px}.v12-street-map-host iframe{min-height:300px}}
+@media(prefers-reduced-motion:reduce){.v12-guardian,.v12-meter>i{transition:none!important}}
+.v12-garden-summary .v11-sheet{padding:17px 23px}
+.v12-garden-summary .v11-sheet .v11-about-copy{margin-bottom:3px}
+.v12-garden-summary .v11-garden{align-items:center;margin-top:10px}
+.v12-garden-summary .v11-plant{width:56px;height:58px}
+.v12-garden-summary .v11-plant svg{width:36px;height:43px}
+.v12-styler-characters{margin:12px 0 10px}

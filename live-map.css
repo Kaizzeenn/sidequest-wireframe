@@ -1,0 +1,26 @@
+/* V13: Leaflet street maps, preserving SIDEQUEST's existing interface. */
+.sq-live-map{position:relative;isolation:isolate;min-width:0;border:1px solid #c2d5c9;border-radius:18px;overflow:hidden;background:#e8eee9;margin-top:12px}
+.sq-live-map .sq-leaflet-canvas{height:390px;width:100%;min-height:280px;z-index:0;font-family:inherit}
+.sq-live-map[data-pick="yes"] .sq-leaflet-canvas{height:300px}
+.sq-map-toolbar{display:flex;align-items:center;gap:8px;padding:10px;background:#f6faf6;flex-wrap:wrap}
+.sq-map-toolbar label{font-size:12px;font-weight:700;flex:1;min-width:160px}
+.sq-map-toolbar select{display:block;width:100%;padding:8px;border:1px solid #a7c6b4;border-radius:9px;color:#244c40;background:#fff;font:inherit;margin-top:4px}
+.sq-map-toolbar button{font:inherit;font-size:12px;border:1px solid #aec8b7;border-radius:9px;background:#fff;color:#244c40;padding:9px 11px;cursor:pointer}
+.sq-map-toolbar button:focus-visible,.sq-map-toolbar select:focus-visible{outline:3px solid #244c40;outline-offset:2px}
+.sq-map-message{padding:9px 12px;background:#f6faf6;color:#385749;font-size:12px;line-height:1.5;margin:0}
+.sq-map-message[data-error="yes"]{background:#fff1d6;color:#604c1e}
+.sq-map-help{padding:7px 12px;background:#f6faf6;color:#385749;font-size:12px;line-height:1.5}.sq-map-help summary{cursor:pointer;font-weight:600}.sq-map-help p{margin:8px 0}.sq-map-help a{text-decoration:underline}.sq-map-help code{font-size:11px;overflow-wrap:anywhere}
+.sq-map-boundary-label{margin:0;padding:8px 12px;background:#e8f2e9;color:#28563e;font-size:12px;font-weight:600;line-height:1.5}
+.sq-report-pin{background:none!important;border:0!important}
+.sq-report-pin .sq-pin-disc{display:grid;place-items:center;width:38px;height:38px;background:#fff;border:2px solid #3a8167;border-radius:50% 50% 50% 9px;transform:rotate(-45deg);box-shadow:0 2px 5px #234b4033}
+.sq-report-pin .sq-pin-disc span{transform:rotate(45deg);font-size:18px}
+.sq-report-pin.sq-private-pin .sq-pin-disc{border-style:dashed;border-color:#886297;background:#fcf6ff}
+.sq-map-popup{min-width:180px;max-width:260px;line-height:1.45;color:#244c40}
+.sq-map-popup strong{font-size:14px;display:block;margin-bottom:5px}
+.sq-map-popup small{display:block;margin-top:5px}
+.sq-map-popup button{margin-top:10px;width:100%;padding:8px;border:0;border-radius:7px;background:#286148;color:#fff;cursor:pointer;font:inherit}
+.sq-map-popup p{margin:5px 0}
+.sq-live-map .leaflet-control-attribution{font-size:10px!important;background:#fffffff0!important}
+.sq-picked-pin{width:18px;height:18px;background:#286148;border:3px solid white;border-radius:50%;box-shadow:0 0 0 2px #286148}
+.sq-coordinate-readout{font-variant-numeric:tabular-nums}
+@media(max-width:600px){.sq-live-map .sq-leaflet-canvas{height:350px}.sq-map-toolbar{gap:6px;padding:8px}.sq-map-toolbar label{flex-basis:100%}.sq-map-toolbar button{min-height:40px;flex:1}.sq-live-map .leaflet-control-attribution{max-width:260px;white-space:normal}.sq-map-popup{max-width:215px}}

@@ -1,0 +1,23 @@
+const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict');
+const store=new Map(),session=new Map();
+const storage=m=>({getItem:k=>m.get(k)||null,setItem:(k,v)=>m.set(k,String(v)),removeItem:k=>m.delete(k)});
+const ctx={console,Date,URLSearchParams,structuredClone,FormData,Number,Math,Set,sessionStorage:storage(session),localStorage:storage(store),window:{},document:{addEventListener(){}}};
+vm.createContext(ctx);vm.runInContext(fs.readFileSync('index.html','utf8').match(/<script>([\s\S]*?)<\/script>/)[1],ctx);
+let checks=0;const check=(name,f)=>{f();console.log('PASS',name);checks++};
+(async()=>{
+ await ctx.demoAPI('/api/auth/login',{json:{email:'explorer@example.test',password:'DemoOnly123!'}});
+ const f=new FormData();for(const[k,v]of Object.entries({title:'New sidewalk obstruction test',description:'A fictional obstruction blocks pedestrian access for this test case.',category:'Accessibility & Mobility',zone:'Taft–Vito Cruz Core',landmark:'Vito Cruz station',observed:new Date().toISOString().slice(0,10),lat:14.564123,lng:120.995321,policy:'yes'}))f.set(k,v);
+ const receipt=await ctx.demoAPI('/api/reports',{method:'POST',body:f});
+ const mine=(await ctx.demoAPI('/api/my')).reports.find(r=>r.ref===receipt.ref);
+ check('new street coordinates survive report submission',()=>{assert.equal(mine.lat,14.564123);assert.equal(mine.lng,120.995321)});
+ await ctx.demoAPI('/api/auth/logout');const before=(await ctx.demoAPI('/api/reports')).reports;
+ check('new pending report is not publicly listed',()=>assert(!before.some(r=>r.id===mine.id)));
+ await assert.rejects(()=>ctx.demoAPI('/api/reports/'+mine.id));checks++;console.log('PASS pending report details denied to signed-out visitor');
+ await ctx.demoAPI('/api/auth/login',{json:{email:'coordinator@example.test',password:'DemoOnly123!'}});
+ await ctx.demoAPI('/api/admin/reports/'+mine.id+'/status',{method:'POST',json:{status:'under_review',note:'Reviewing the fictional street-map test case.'}});
+ await ctx.demoAPI('/api/admin/reports/'+mine.id+'/status',{method:'POST',json:{status:'verified',note:'Verified for classroom map testing only.'}});
+ await ctx.demoAPI('/api/auth/logout');const after=(await ctx.demoAPI('/api/reports')).reports;
+ check('verified report becomes public at its submitted coordinates',()=>{const r=after.find(r=>r.id===mine.id);assert(r);assert.equal(r.lat,14.564123);assert.equal(r.lng,120.995321)});
+ check('case storage is persisted for other same-origin tabs',()=>assert([...store.values()].some(v=>v.includes(receipt.ref))));
+ console.log(checks+' API/storage checks passed (no browser rendering).');
+})().catch(e=>{console.error(e);process.exitCode=1});

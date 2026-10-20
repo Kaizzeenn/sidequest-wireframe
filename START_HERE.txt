@@ -1,0 +1,13 @@
+SIDEQUEST PLAIN WEB APP - START HERE
+
+1. Extract the entire ZIP.
+2. Windows: double-click START_SIDEQUEST.bat (Python 3 required).
+3. Keep the terminal window open. The website opens at http://127.0.0.1:8765/.
+4. Keep your internet connection on for street tiles.
+
+Other options: VS Code Live Server, python3 start_sidequest.py, or GitHub Pages.
+Do not double-click index.html for online map use: file URLs do not supply the website referrer required by OSM.
+
+If the tile provider still blocks an HTTP/HTTPS page, use the Map not loading? help. Browser privacy settings, network/provider blocks, or a previously cached provider response may be involved. The application cannot guarantee provider access.
+
+See PLAIN_EDITION_README.md for account details and included workflows.

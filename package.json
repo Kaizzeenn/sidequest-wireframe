@@ -1,0 +1,10 @@
+{
+  "name": "sidequest-v13-street-map",
+  "private": true,
+  "scripts": {
+    "test": "node tests/map-test.cjs && node tests/api-test.cjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.13"
+  }
+}
