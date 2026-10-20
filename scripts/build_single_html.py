@@ -3,8 +3,8 @@ from pathlib import Path
 import re
 import sys
 ROOT = Path(__file__).resolve().parent.parent
-TARGET = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else ROOT / 'SIDEQUEST_Final.html'
-html = (ROOT / 'index.html').read_text()
+TARGET = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else ROOT / 'index.html'
+html = (ROOT / 'source.html').read_text()
 def stylesheet(match):
     content = (ROOT / match[1]).read_text()
     # Raster layer controls are unused; report markers use inline div icons.

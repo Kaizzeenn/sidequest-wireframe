@@ -3,7 +3,7 @@
 This is a separate, working plain edition of the current SIDEQUEST V13.2 app. It uses the original reporting/account/coordinator logic with a neutral black-and-white interface.
 
 ## Open
-For easy access, double-click SIDEQUEST_Final.html. Reporting and tracking work locally; street tiles pause on a file address. See FINAL_START_HERE.txt for the presentation flow and accounts.
+For easy access, double-click index.html. Reporting and tracking work locally; street tiles pause on a file address. See FINAL_START_HERE.txt for the presentation flow and accounts.
 
 For the online street map: Extract everything. On Windows, double-click START_SIDEQUEST.bat (Python 3 required) and leave its terminal open. Or use VS Code Live Server / GitHub Pages. Internet is required for street tiles. Do not open index.html directly for the online map.
 

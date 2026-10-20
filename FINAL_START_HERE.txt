@@ -1,7 +1,7 @@
 SIDEQUEST: TAFT RADAR — FINAL SCHOOL EDITION
 
 QUICK OPEN
-Double-click SIDEQUEST_Final.html. No installation is needed for the local reporting app.
+Double-click index.html. No installation is needed for the local reporting app.
 Keep using the same browser and file location to retain your saved records.
 
 STREET MAP
@@ -30,7 +30,7 @@ The four required pages are Home, Report, Track and Coordinator. Area map and
 My Activity are supporting views. The layout responds to actual screen width.
 
 SUBMISSION CONTENTS
-SIDEQUEST_Final.html: one-file version for easy access.
+index.html: one-file version for easy access.
 index.html + CSS/JS/vendor files: editable source for Live Server or hosting.
 scripts/build_single_html.py: rebuilds the single HTML after source edits.
 tests/: DOM and data logic checks; package.json includes the test command.
@@ -46,3 +46,8 @@ VALIDATION
 These checks do not verify visual layout or actual provider tile loading.
 Before presenting, open on your device and check Home, Report, Track and
 Coordinator at desktop and mobile widths using the intended opening method.
+
+EDITABLE HTML
+index.html is the bundled app. source.html contains the editable HTML and uses
+the CSS/JS/vendor files beside it. After editing source.html or its assets, run
+python scripts/build_single_html.py to rebuild index.html.
